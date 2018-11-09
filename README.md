@@ -2,6 +2,11 @@
 
 A client to write the software to control the flow of planes at an airport.
 
+# Running
+
+run bundle in terminal
+
+
 # tasks/ story points
 
 As an air traffic controller So I can get passengers to a destination I want to instruct a plane to land at an airport and confirm that it has landed
@@ -16,8 +21,8 @@ As an air traffic controller To ensure safety I want to prevent landing when the
 
 As the system designer So that the software can be used for many different airports I would like a default airport capacity that can be overridden as appropriate
 
-
-        ______
+```
+      ______
         _\____\___
 =  = ==(____MA____)
           \_____\___________________,-~~~~~~~-.._
@@ -25,5 +30,7 @@ As the system designer So that the software can be used for many different airpo
           ~-.__       __..----..__                  )
                 ---~~\___________/------------''''''
                 =  ===(_________)
+
+```
 
 The Maker's Academy Week 1 challenge, expected to be completed over the weekend.
