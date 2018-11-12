@@ -16,6 +16,7 @@ A client to write the software to control the flow of planes at an airport.
 
 ## Running
 
+check to see if you have ruby 2.5.0
 run bundle in terminal
 
 
