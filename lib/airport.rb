@@ -1,16 +1,15 @@
-CAPACITY = 50
 # Initialize the airport controls
 class Airport
   attr_accessor :planes, :weather, :capacity
 
-  def initialize(weather = 'sunny', capacity = CAPACITY)
+  def initialize(weather = 'sunny', capacity = 50)
     @plane_arr = []
     @weather = weather
     @capacity = capacity
   end
 
   def land!(plane)
-    raise 'Airport full, please turn around' if max_capacity == 50
+    raise 'Airport full, please turn around' if max_capacity == capacity
     @plane_arr << plane
   end
 
@@ -19,7 +18,7 @@ class Airport
   end
 
   def max_capacity
-    @plane_arr.length == 50
+    @plane_arr.length == capacity
   end
 
   def take_off(plane)
