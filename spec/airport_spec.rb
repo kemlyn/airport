@@ -2,7 +2,7 @@ require 'airport'
 require 'plane'
 
 describe Airport do
-  subject(:airport) { described_class.new }
+  subject(:airport) { Airport.new }
   plane = Plane.new
 
   context '#landing' do
@@ -25,7 +25,7 @@ describe Airport do
       airport.capacity.times { airport.land!(plane) }
 
       # Assert
-      expect(airport.max_capacity).to eql true
+      expect(airport.max_capacity).to eql(true)
     end
 
     it 'does\'t allow landing of max capacity is reached' do
@@ -44,21 +44,10 @@ describe Airport do
   context '#taking off' do
     it 'allows planes to take off' do
       # Arrange
-      airport.planes = plane
       airport.weather = 'sunny'
 
       # Act
-      airport.take_off(plane)
-
-      # Assert
-      expect(airport.in_port?(plane)).to eql(false)
-    end
-
-    it 'shows plane is no longer in airport after takeoff' do
-      # Arrange
-      airport.planes = plane
-
-      # Act
+      airport.land!(plane)
       airport.take_off(plane)
 
       # Assert

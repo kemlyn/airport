@@ -23,9 +23,8 @@ class Airport
   end
 
   def take_off(plane)
-    raise 'cannot take off due to weather' if weather == 'raining'
+    raise 'Your plane is at another airport' if in_port?(plane) == false
+    raise 'Cannot take off due to weather' if weather == 'raining'
     @plane_arr.delete(plane)
   end
 end
-
-# TODO: Set weather to random
